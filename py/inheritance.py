@@ -23,4 +23,5 @@ class Cow(Animal):
     sound="Mooooo"
 
 berny = Cow('berny')
+
 print(berny)

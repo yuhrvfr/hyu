@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/herveyu/Desktop/hyu/py/pywithos/./streams_err.py", line 5, in <module>
+    raise ValueError("Now we generate an error to STDERR")
+ValueError: Now we generate an error to STDERR
+Traceback (most recent call last):
+  File "/Users/herveyu/Desktop/hyu/py/pywithos/./streams_err.py", line 5, in <module>
+    raise ValueError("Now we generate an error to STDERR")
+ValueError: Now we generate an error to STDERR
+Traceback (most recent call last):
+  File "/Users/herveyu/Desktop/hyu/py/pywithos/bash/./bash_streams_err.py", line 5, in <module>
+    raise ValueError("Now we generate an error to STDERR")
+ValueError: Now we generate an error to STDERR

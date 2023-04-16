@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 file_c ={'jpg':10,'txt':12,'png':33}
 for ext,cnt in file_c.items():
    print('there are {amt} files .{ex}.'.format(amt=cnt,ex=ext))
@@ -72,3 +74,9 @@ colors = ["red", "white", "blue"]
 colors.insert(2, "yellow")
 
 print(colors)
+
+usernames = {}
+name = 'HerveYu'
+usernames[name] = usernames.get(name,0)+1
+
+print(usernames)

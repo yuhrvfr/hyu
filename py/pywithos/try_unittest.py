@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from simple_fct2test import *
+from _hyufct import *
 from try_raise import *
 
 import unittest
@@ -50,13 +50,13 @@ class MytestFile(unittest.TestCase):
     def test_full_path_file_in(self):
         filename = '_testread.txt'
         path = full_path_file(filename,'in')
-        expected = '/Users/herveyu/Desktop/hyu/py/filein/_testread.txt'
+        expected = '/Users/herveyu/Desktop/hyu/py/pywithos/filein/_testread.txt'
         self.assertEqual(expected,path)
 
     def test_full_path_file_out(self):
         filename = '_testwrite.txt'
         path = full_path_file(filename,'out')
-        expected = '/Users/herveyu/Desktop/hyu/py/fileout/_testwrite.txt'
+        expected = '/Users/herveyu/Desktop/hyu/py/pywithos/fileout/_testwrite.txt'
         self.assertEqual(expected,path)
 
 

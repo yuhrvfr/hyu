@@ -91,9 +91,9 @@ def full_path_file(filename, io):
     else:
         ldir = dirfileout
 
-    if not os.path.isdir(os.path.join('..',ldir)):
+    if not os.path.isdir(os.path.join('.',ldir)):
         raise OSError("The directory {} does not exist".format(ldir))
-    ldir = os.path.join('..',ldir)
+    ldir = os.path.join('.',ldir)
     fullname = os.path.join(ldir,filename)
     print(fullname)
     if io == 'in' and not os.path.isfile(fullname):

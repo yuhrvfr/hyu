@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from simple_fct2test import *
+from _hyufct import *
 import os
 import sys
 

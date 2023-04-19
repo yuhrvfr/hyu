@@ -32,6 +32,9 @@ class MytestRearrange(unittest.TestCase):
     def test_remove_digit_nstr_input(self):
         self.assertRaises(AssertionError,remove_digit,["we"])
 
+
+class MytestFile(unittest.TestCase):
+
     def test_file_start_with(self):
         filename = "bash_test_file.py"
         self.assertTrue(file_start_with(filename,'bash'))
@@ -41,11 +44,20 @@ class MytestRearrange(unittest.TestCase):
         newdir = mk_new_dir(dirname,"N")
         self.assertEqual(dirname,newdir)
 
+    def test_read_filein_exception(self):
+        self.assertRaises(OSError,full_path_file,"monfichier.txt","in")
 
+    def test_full_path_file_in(self):
+        filename = '_testread.txt'
+        path = full_path_file(filename,'in')
+        expected = '/Users/herveyu/Desktop/hyu/py/filein/_testread.txt'
+        self.assertEqual(expected,path)
 
-
-
-
+    def test_full_path_file_out(self):
+        filename = '_testwrite.txt'
+        path = full_path_file(filename,'out')
+        expected = '/Users/herveyu/Desktop/hyu/py/fileout/_testwrite.txt'
+        self.assertEqual(expected,path)
 
 
 class MytestRemoveDigit(unittest.TestCase):

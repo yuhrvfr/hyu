@@ -3,6 +3,7 @@ import re
 import os
 import shutil
 
+
 def rearrange_name(name):
     result = re.search(r"^([\w .]*), ([\w .]*)$", name)
     if result == None:
@@ -76,3 +77,63 @@ def mv_dir_file(dir, fsw):
            lfd = os.path.join(os.path.join('.',ldir),elt)
            shutil.move(lfc,lfd)
            print("The file {} will be moved to {}".format(lfc,lfd))
+
+
+
+def full_path_file(filename, io):
+    """Ensure filename exists in the right directory """
+    dirfilein = 'filein'
+    dirfileout = 'fileout'
+    ldir = ''
+    # print(os.path.join('..',dirfilein))
+    if io == 'in' or io == None:
+        ldir = dirfilein
+    else:
+        ldir = dirfileout
+
+    if not os.path.isdir(os.path.join('..',ldir)):
+        raise OSError("The directory {} does not exist".format(ldir))
+    ldir = os.path.join('..',ldir)
+    fullname = os.path.join(ldir,filename)
+    print(fullname)
+    if io == 'in' and not os.path.isfile(fullname):
+        raise OSError("The file "+ldir+'/'+filename+" does not exist.")
+    elif io == 'out' and os.path.isfile(fullname):
+        raise OSError("The file exist "+fullname+" already exist, please back it up or remove it before.")
+    print(os.path.abspath(fullname))
+    return os.path.abspath(fullname)
+
+
+
+def split_line(line):
+    """When the . punctuation is found in a line, add \n to split the line into individual lines."""
+    long  = len(line)
+    pos   = 0
+    ret   = ''
+    print(long)
+    for i in range(long):
+        if line[i] in ('.','?'):
+            ret = ret + line[pos:i+1].strip() + "\n"
+            pos = i + 1
+    return ret
+
+# l = '1234567890. 1234567890.1234567890. que fais" tu? Alors. '
+# ret = split_line(l)
+# print(ret)
+
+def formattext(filename):
+    """ Split the filein/<filename> input into a new file fileout/o_<filename>, caution if file exists it will be overwritten"""
+    # dirfilein = 'filein'
+    # dirfileout = 'fileout'
+
+    filein = full_path_file(filename, 'in')
+
+    fileout  = full_path_file("o_"+filename,'out')
+
+    lwf = open(fileout,'w')
+
+    with open(filein) as file:
+        for line in file:
+            ret = split_line(line)
+            lwf.write(ret)
+    lwf.close()

@@ -1,0 +1,20 @@
+--- loop_bsh_orig.sh	2023-04-16 17:10:26
++++ loop_bsh.sh	2023-04-16 17:12:00
+@@ -1,11 +1,11 @@
+ #!/bin/bash
+ n=1
+-# while test $n -le 5; do
+-#   echo "Iteration number $n"
+-#   ((n+=1))
+-# done
+-
+-while [ $n -le 5 ]; do
++while test $n -le 5; do
+   echo "Iteration number $n"
+   ((n+=1))
+ done
++
++# while [ $n -le 5 ]; do
++#   echo "Iteration number $n"
++#   ((n+=1))
++# done

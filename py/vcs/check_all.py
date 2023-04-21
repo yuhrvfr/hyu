@@ -7,8 +7,6 @@ def check_reboot():
     return os.path.exists("/run/reboot-required")
 
 
--- problem after commit !!!
-
 def main():
     if check_reboot():
         print("Pending reboot.")

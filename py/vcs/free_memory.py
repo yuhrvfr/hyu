@@ -2,5 +2,6 @@
 
 def main():
     """ this is gestion of the memory """
+    print("Everything is OK")
 
 main()

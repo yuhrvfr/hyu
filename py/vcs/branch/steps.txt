@@ -46,4 +46,6 @@ $ git branch -d new-feature
   Deleted branch new-feature (was 82192ab).
 
 #8 Now I do change in the branch even-better-feature for example I issue a commit in even-better-feature
-$ git add 
+$ git add ../pywithos/fileout/divination.txt branch/
+
+$ git commit -m "Branch even-better-feature Add steps.txt Add divination Udpate ..."

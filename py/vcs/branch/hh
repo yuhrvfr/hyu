@@ -75,3 +75,67 @@ Don't forget to commit this change
 
 #Step conflicting this text is in main-branch
 #Step conflicting: this text is in even-better-branch
+
+#11 After using atom to resolved the conflict, use git status to show what to do:
+
+a) Resolved the code conflict
+b) $ git add <file where code is resolved>
+c) $ git commit -m "There will a default message about conflict resolution and I can add some additional comments "
+Be carefull the merge will be only in main branch, for even-better branch additional steps required.
+If I check with git log -p I can see tThanks he HEAD is ONLY pointing to the commit of main branch.
+
+The merge from branch even-better-feature is in main branch, BUT the code of main branch is NOT in even-better branch.
+
+To synchronize both branch.
+$ git checkout even-better-feature
+$ git merge main
+
+Now both branches are in sync.
+
+#12  Check the summary of commit history:
+$ git log --graph --oneline
+
+*   f972644 (HEAD -> main, even-better-feature) resolution conflict
+|\
+| * 5962c7c #Step conflicting in hh  this text is in even-better-branch
+* | fa955ce #Step conflicting in hh  this text is in main-branch
+|/
+*   8dd1b70 Merge branch 'even-better-feature' into main
+|\
+| * 3c9244c Remove incorrect log text
+* | 7f8932a Add #11 in main branch stepsmain before switching to even-better-feature
+|/
+* ec19df5 Add hh
+*   7436a19 Merge branch 'even-better-feature' into main
+|\
+| * 87c8c09 .
+| * 38c7954 Branch: even-better-feature
+* | b1e4e69 Add branch/steps.txt
+|/
+* 82192ab Revert "Add call to disk_full."
+* 44ba15f Add call to disk_full.
+* f5bf822 (origin/main, origin/HEAD) Clean up test case of the 2 files fix with commit amend
+*   e59e14f Merge branch 'main' of https://github.com/yuhrvfr/hyu into main
+|\
+| * fcea3ee Adding 2 new files
+* | 6b24b9e Adding 2 new files  file_commit_first.txt  file_missed_commit.txt
+|/
+* 40b0a05 clean up vcs and add check_all.py
+* e1cd6b6 synch check_all.py
+* 719c9e3 cleanup existing file in py/filein and fileout
+* 8023670 change import from _hyufct and modify the read/write filein/fileout to directory pywithod/filein/fileout
+* 08b45d0 change simple_fct2test.py to _hyufct.py
+* 8b62e5b ignore the Mac OS .DS_Store file using .gitignore
+* 30f385b Delete o_NaziriteVow.txt for test to github
+* 3790c47 Deleted t.txt useless file
+* 60a53bc Formatter files from py/filein/ to py/fileout
+* 9b0a72e 2023-04-16
+* 4b2a33b APR-12-2023
+* 34849bb 2023-04-10
+* e8e17a0 :meth sort and fct sorted
+* 068d874 :inheritance composition
+* f401343 =class and inheritane
+* 5476c9d add files
+* c4d3844 mv to subdir py/
+* 4afeb97 =1 dict.py
+* 7a166de Initial commit

@@ -68,3 +68,7 @@ $ git checkout main
 
 Now I merge event-better-feature branch into the main
 $ git merge event-better-feature
+
+#10 I go back to even-better-feature branch do some modification in the file hh
+
+#11 in main branch, add step 11 and commit, before moving to even-better-feature

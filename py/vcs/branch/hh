@@ -69,3 +69,6 @@
 +
 +Now I merge event-better-feature branch into the main
 +$ git merge event-better-feature
+
+#10 Branch even-better-feature add this text
+Don't forget to commit this change

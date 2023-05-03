@@ -1,0 +1,2 @@
+NAME:  HyuOpenAITestKey
+KEY:   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

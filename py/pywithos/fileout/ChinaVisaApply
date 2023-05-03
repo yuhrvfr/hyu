@@ -19,3 +19,8 @@ Otherwise, the COVA Application ID and the AVAS Appointment Number�
 The applicant needs to fill in a new COVA form and make another appointment on AVAS. 
 For other matters on applying for a Chinese visa,
 please refer to the following website: http://sanfrancisco.china-consulate.gov.cn/zytz/202301/t20230117_11009747.htm
+
+
+git remote set-url origin	https://<accountname>:<token>@github.com/yuhrvfr/hyu.git
+
+git remote set-url origin	https://yuhrvfr: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@github.com/yuhrvfr/hyu.git

@@ -21,4 +21,4 @@ For other matters on applying for a Chinese visa,
 please refer to the following website: http://sanfrancisco.china-consulate.gov.cn/zytz/202301/t20230117_11009747.htm
 
 
-git remote set-url origin	https://<accountname>:<token>@github.com/yuhrvfr/hyu.git
+git remote set-url origin https://<accountname>:<token>@github.com/yuhrvfr/hyu.git
